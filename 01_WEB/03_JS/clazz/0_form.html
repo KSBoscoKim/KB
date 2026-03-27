@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        let btn = document.getElementById('btn');
+
+        btn.addEventListener('click', function () {
+          let input = document.getElementById('name');
+          console.log(input.value);
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <form action="">
+      <label for="name">이름: </label>
+      <input type="text" id="name" name="name" size="30" />
+      <input type="button" id="btn" value="전송" />
+    </form>
+  </body>
+</html>

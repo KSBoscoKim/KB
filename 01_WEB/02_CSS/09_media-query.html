@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* body {
+        background-color: orange;
+      }
+
+      @media screen and (max-width: 1000px) {
+        body {
+          background-color: skyblue;
+        }
+      } */
+      .parent {
+        display: flex;
+        justify-content: space-around;
+        background-color: #ccc;
+      }
+      .box {
+        box-sizing: border-box;
+        width: 200px;
+        height: 100px;
+        border: 1px solid black;
+        flex-shrink: 1;
+      }
+      @media screen and (max-width: 600px) {
+        .parent {
+          flex-direction: column;
+        }
+
+        .box {
+          width: inherit;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- .parent>.box*6 -->
+    <div class="parent">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+      <div class="box">box4</div>
+      <div class="box">box5</div>
+      <div class="box">box6</div>
+    </div>
+  </body>
+</html>

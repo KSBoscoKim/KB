@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        position: relative;
+      }
+      .circle {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background-color: skyblue;
+        border-radius: 50% 50%;
+      }
+      .eye {
+        position: absolute;
+        left: 30px;
+        top: 30px;
+      }
+      #black {
+        background-color: black;
+        width: 12px;
+        height: 12px;
+        z-index: 1;
+      }
+      #white {
+        background-color: white;
+        width: 25px;
+        height: 25px;
+      }
+      #blue {
+        position: absolute;
+        background-color: blue;
+        left: 70px;
+        top: 30px;
+      }
+      #aqua {
+        position: absolute;
+        background-color: aqua;
+        left: 120px;
+      }
+      #dodblue {
+        position: absolute;
+        background-color: dodgerblue;
+        left: 170px;
+      }
+      #dg {
+        position: absolute;
+        background-color: darkgreen;
+        left: 220px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="circle"></div>
+      <div class="circle eye" id="black"></div>
+      <div class="circle eye" id="white"></div>
+      <div class="circle" id="blue"></div>
+      <div class="circle" id="aqua"></div>
+      <div class="circle" id="dodblue"></div>
+      <div class="circle" id="dg"></div>
+    </div>
+  </body>
+</html>
