@@ -11,6 +11,7 @@ import VmodelModalParent from './components/03_slot-teleport/VmodelModalParent.v
 import ProvideParent from './components/04_provide/ProvideParent.vue';
 import Computed from './components/05_composition-api/Computed.vue';
 import Counter from './components/05_composition-api/Counter.vue';
+import ExQuizParent from './components/05_composition-api/exQuizParent.vue';
 import QuizParent from './components/05_composition-api/QuizParent.vue';
 import RefReactive from './components/05_composition-api/RefReactive.vue';
 import Vue3EmitParent from './components/05_composition-api/Vue3EmitParent.vue';
@@ -21,7 +22,7 @@ import WatchEffect from './components/05_composition-api/WatchEffect.vue';
 </script>
 
 <template>
-  <QuizParent />
+  <ExQuizParent />
 </template>
 
 <style scoped></style>

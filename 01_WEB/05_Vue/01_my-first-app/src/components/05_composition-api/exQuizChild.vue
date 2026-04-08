@@ -1,29 +1,39 @@
 <template>
   <div>
     <span>
-      <input type="number" v-model.trim="userInput" />
-      <button @click="checkAnswer">정답!</button>
+      <input v-model.number="userInput" @keyup.enter="submit" />
+      <button @click="submit">정답!</button>
     </span>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, watchEffect } from 'vue';
 
 const userInput = ref(0);
-const props = defineProps(['randNum']);
 const msg = ref('');
-const emit = defineEmits(['send-msg']);
+const attempt = ref(0);
 
-const checkAnswer = () => {
-  if (userInput.value > props.randNum) {
-    msg.value = 'DOWN';
-  } else if (userInput.value < props.randNum) {
-    msg.value = 'UP';
-  } else {
-    msg.value = '정답입니다!';
-  }
+const props = defineProps({
+  answer: {
+    type: Number,
+    required: true,
+  },
+});
 
-  emit('send-msg', msg.value);
+const emit = defineEmits(['submit']);
+
+const submit = () => {
+  attempt.value++;
+
+  if (props.answer > userInput.value) msg.value = 'UP';
+  else if (props.answer < userInput.value) msg.value = 'DOWN';
+  else msg.value = '정답입니다!';
+
+  emit('submit', msg.value);
 };
+
+watchEffect(() => {
+  if (attempt.value === 3) return alert('3번째 시도입니다!');
+});
 </script>

@@ -1,0 +1,22 @@
+.container {
+  width: 500px;
+  border: 1px solid black;
+  display: flex;
+  background: yellow;
+}
+.item {
+  border: 1px solid black;
+  flex: 1;
+  width: 100px;
+}
+.item1 {
+  background: red;
+  flex: 1;
+}
+.item2 {
+  background: orange;
+}
+.item3 {
+  background: yellow;
+  flex-grow: 1;
+}

@@ -22,7 +22,7 @@ import { reactive, ref } from 'vue';
 // console.log('🚀 ~ obj.value::', obj.value);
 
 const refData = ref({ name: '이효석' });
-const reactiveData = reactive({ name: '이효석' });
+let reactiveData = reactive({ name: '이효석' });
 
 const changeRef = () => {
   refData.value = { name: '차은우' };
